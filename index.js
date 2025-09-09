@@ -1,17 +1,24 @@
-let alunos = [
-    {"nome":"jho", "idade": 18, "nota": [9,10,6]},
-    {"nome":"arthur", "idade": 17, "nota": [5,10,10]},
-    {"nome":"janaina", "idade": 27, "nota": [4,5,2]},
-    {"nome":"marcos", "idade": 16, "nota": [8,9,6]}
-]
+const caminho = './alunos.json'
+const fs = require("fs")
+const conteudo = fs.readFileSync(caminho, 'utf8');
+const dadosAlunos = JSON.parse(conteudo)
 
-const cadastro = (nome, idade, notas)=>{
+let alunos = []
+
+alunos = JSON.parse(conteudo);
+
+const salvarAlunos= ()=> {
+    fs.writeFileSync("alunos.json", JSON.stringify(alunos,null))
+}
+
+const cadastrar = (nome, idade, notas)=>{
     alunos.push({nome, idade, notas})
+    salvarAlunos()
 }
 
 const exibir = ()=>{
-    for (let i = 0; i < alunos.length; i++) {
-        console.log(`${alunos[i].nome}`);
+    for (let i = 0; i < dadosAlunos.length; i++) {
+        console.log(`${dadosAlunos[i].nome}`);
         console.log(`-------------------`);
     }
 }
@@ -19,9 +26,9 @@ const exibir = ()=>{
 const busca = (nome)=>{
     let encontrado = false;
 
-    alunos.forEach((el, i)=>{
+    dadosAlunos.forEach((el, i)=>{
         if(el.nome == nome){
-            console.log(`Id:${i} / Nome:${el.nome} / Idade:${el.idade} / Notas:${el.nota}`);
+            console.log(`Id:${i} / Nome:${el.nome} / Idade:${el.idade} / Notas:${el.notas}`);
             encontrado = true
         };
     });
@@ -31,10 +38,3 @@ const busca = (nome)=>{
         };
 }
 
-busca("maria")
-
-
-// for (let i = 0; i < array.length; i++) {
-//     const element = array[i];
-    
-// }
