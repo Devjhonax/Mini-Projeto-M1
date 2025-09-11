@@ -1,9 +1,0 @@
-[
-  { "nome": "Jhonathas", "idade": 18, "notas": [5, 9, 7] },
-  { "nome": "Naiala", "idade": 17, "notas": [5, 10, 2] },
-  { "nome": "paulo", "idade": 17, "notas": [9, 8, 5] },
-  { "nome": "marcelo", "idade": 17, "notas": [5, 6, 5] },
-  { "nome": "mariana", "idade": 18, "notas": [9, 10, 7] },
-  { "nome": "lucia", "idade": 17, "notas": [4, 8, 5] },
-  { "nome": "rodrigo", "idade": 23, "notas": [7, 3, 10] }
-]

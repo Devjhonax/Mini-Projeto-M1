@@ -1,0 +1,47 @@
+[
+  {
+    "nome": "murilo",
+    "idade": "33",
+    "notas": [
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "nome": "rodrigo",
+    "idade": "22",
+    "notas": [
+      4,
+      6,
+      8
+    ]
+  },
+  {
+    "nome": "afonco",
+    "idade": "19",
+    "notas": [
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "nome": "jhonathas",
+    "idade": "18",
+    "notas": [
+      7,
+      10,
+      9
+    ]
+  },
+  {
+    "nome": "naiala",
+    "idade": "17",
+    "notas": [
+      7,
+      5,
+      6
+    ]
+  }
+]
