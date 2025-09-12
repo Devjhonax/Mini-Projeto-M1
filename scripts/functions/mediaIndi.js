@@ -1,15 +1,16 @@
-import * as cadasto from './cadastro.js'
+import * as cadastro from './cadastro.js'
 
+// fução que exibi a media individual do aluno buscado
 const mediaIndividual = (nome) => {
     let encontrado = false;
 
-    cadasto.alunos.forEach((el, i) => {
+    cadastro.alunos.forEach((el, i) => {
         if (el.nome == nome) {
-            let aluno = cadasto.alunos[i].notas
+            let aluno = cadastro.alunos[i].notas
             let media = (aluno[0] + aluno[1] + aluno[2]) / aluno.length
-            let nomeAluno = cadasto.alunos[i].nome
+            let nomeAluno = cadastro.alunos[i].nome
 
-            console.log(`media do aluno ${nomeAluno} é ${media}`);
+            console.log(`media do aluno ${nomeAluno} é ${media.toFixed(1)}`);
             encontrado = true
         };
     });

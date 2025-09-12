@@ -1,11 +1,14 @@
-import * as cadasto from './cadastro.js'
+// importa as funções do arquivo de cadastro
+import * as cadastro from './cadastro.js'
 
+// lista de arrays para salvar as condições dos estudantes
 let recuperacao = []
 let aprovados = []
 let reprovados = []
 let mediaSala = []
 let estudanteExemplar = ''
 
+// função de calculo
 const calculo = () => {
     let maiorMedia = 0
 
@@ -14,10 +17,10 @@ const calculo = () => {
     reprovados = []
     mediaSala = []
 
-    for (let i = 0; i < cadasto.alunos.length; i++) {
-        let aluno = cadasto.alunos[i].notas
+    for (let i = 0; i < cadastro.alunos.length; i++) {
+        let aluno = cadastro.alunos[i].notas
         let media = (aluno[0] + aluno[1] + aluno[2]) / aluno.length
-        let nomeAluno = cadasto.alunos[i].nome
+        let nomeAluno = cadastro.alunos[i].nome
         mediaSala.push({ 'nome': nomeAluno, 'media': media.toFixed(1) })
 
         if (media >= 7) {
