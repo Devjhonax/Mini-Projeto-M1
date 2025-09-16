@@ -17,20 +17,18 @@ let notas = []
 let menu = () => {
     rl.question(`
         ## GESTÃO DE ALUNOS ##
-        Selecione o que deseja fazer:
-        
         1 - Cadastrar estudante
         2 - Buscar estudante
         3 - Listar estudantes
         4 - Media de todos os alunos
         5 - Media individual
         6 - Estudante com maior media
-        7 - Estundantes reprovados
+        7 - Estudantes reprovados
         8 - Estudantes em recuperação
         9 - Estudantes aprovados
         10 - Excluir estudante
         11 - Alterar dados do estudante
-        `, (opcao) => {
+        Selecione o que deseja fazer ==>`, (opcao) => {
         switch (opcao) {
             case '1':
                 rl.question('Digite o nome: ', (nome) => {
